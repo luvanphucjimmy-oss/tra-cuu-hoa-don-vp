@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Tra cứu hóa đơn</title>
+</head>
+<body>
+  <h2>Tra cứu hóa đơn điện tử</h2>
+  <input type="text" id="code" placeholder="Nhập mã hóa đơn...">
+  <button onclick="checkInvoice()">Tra cứu</button>
+  <p id="result"></p>
+
+  <script>
+    function checkInvoice() {
+      const code = document.getElementById("code").value.trim();
+      const result = document.getElementById("result");
+      if (code === "INV123456") {
+        result.innerHTML = `<a href="invoices/INV123456.pdf" target="_blank">Mở hóa đơn INV123456</a>`;
+      } else {
+        result.innerText = "Không tìm thấy hóa đơn.";
+      }
+    }
+  </script>
+</body>
+</html>
